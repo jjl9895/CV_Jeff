@@ -136,7 +136,7 @@ while True:
             coordinates = cam.get_coordinates(color_frame, cam.model)
 
         except:
-            print("Error getting cordinates\n")
+            print("Error getting coordinates\n")
 
         if coordinates != None:
             # Get Median Depth from depth frame
@@ -159,7 +159,7 @@ while True:
                 (coordinates[1]+coordinates[3])/2,
                 640,
                 480)
-            print("This is run", final_cords)
+            
 
 
 
