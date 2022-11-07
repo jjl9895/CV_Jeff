@@ -6,7 +6,6 @@
 
 import torch
 import os
-#import serial
 import numpy as np
 from turtle import color
 import matplotlib
@@ -115,13 +114,6 @@ class Capture:
 
         detections_rows = results.pandas().xyxy
 
-        #rows = [x.to_numpy for x in detections_rows]
-
-#         for i in range(len(detections_rows)):
-#             rows = detections_rows[i].to_numpy()
-
-        # Go through all detections
-
         for i in range(len(rows)):
             if len(rows) > 0:
                 # Get the bounding box of the first object (most confident)
@@ -149,7 +141,7 @@ class Capture:
                     bbox = [x_min, y_min, x_max, y_max]
                     self.write_bbx_frame(color_image, bbox, label, conf)
         # Display the image
-        #cv2.imshow('RealSense', color_image)
+       
         cv2.waitKey(1)
 
     def write_bbx_frame(self, color_image, bbxs, label, conf):

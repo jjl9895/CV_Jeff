@@ -15,8 +15,7 @@ class DepthCamera:
         self.pipeline = rs.pipeline()
         config = rs.config()
         self.load_model()
-        # self.cap = cv2.VideoCapture("./CV_Detection-code-refactor-arjun/utils/vid.mp4")
-
+        
         # Get device product line for setting a supporting resolution
         pipeline_wrapper = rs.pipeline_wrapper(self.pipeline)
         pipeline_profile = config.resolve(pipeline_wrapper)
@@ -163,6 +162,4 @@ while True:
             print("This is run", final_cords)
 
 
-if __name__ == '__main__':
-    import sys
-    main(sys.argv[1:])
+
