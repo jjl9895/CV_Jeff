@@ -1,4 +1,4 @@
-# CV_MIdterm-Jeff
+# CV_Midterm_Jeff
 
 
 Name: Jeff Lin
